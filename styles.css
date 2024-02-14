@@ -1,63 +1,98 @@
 #container {
-    position: relative;
+  position: relative;
 }
 
-body{
-    position: relative;
+body {
+  position: relative;
 }
 
-.inner{
-    margin-top: 50px;
-    margin-bottom: 100px;
-    left: 0px;
-    height: 50px;
+.footer-low {
+  margin: "auto";
+    position: absolute;
+    bottom: 0;
+    width: 100%; /* Ensure the footer spans the width of the screen */
+    height: 50px; /* Set the height of your footer */
+    /* Add more styling here for your footer */
+  }
+
+  .info-cori{
+    display: none;
+    opacity: 0;
+  }
+.inner {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  left: 0px;
+  height: 50px;
 }
 
-.title{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin: 9px;
+.title {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 9px;
 }
 
 #trail-canvas {
-    position: absolute; /* Changed from fixed to absolute */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+  position: absolute; /* Changed from fixed to absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
-    z-index: -100; /* Position the canvas behind other content */
+  z-index: -100; /* Position the canvas behind other content */
 }
 
 button {
-    background-color: white;
-    border: 1px solid blue;
-    margin: 15px;
-    padding: 3px;
-
+  background-color: white;
+  border: 1px solid blue;
+  margin: 15px;
+  padding: 3px;
 }
-button:hover{
-    background-color: gray;
+button:hover {
+  background-color: gray;
+}
+
+.info {
+    display: inline-flex; /* Makes the info icon align properly */
+    align-items: center;
+    justify-content: center;
+    width: 25px; /* Set a fixed width and height for the info icon */
+    height: 25px;
+    text-align: center; /* Ensures the icon centers inside the div */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border: 1px solid blue;
+    border-radius: 50%;
+    transition: opacity 0.5s, max-height 0.5s ease-in-out; /* Smooth transition for opacity and max-height */
+    /* Your existing styles here */
+  }
+.info:hover {
+  background-color: gray;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-#windStrands {
-    position: absolute; /* Changed from relative to absolute */
-    z-index: 200;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+#windStrands {
+  position: absolute; /* Changed from relative to absolute */
+  z-index: 200;
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the items. Use 'flex-start' to align them to the left */
+    padding: 10px; /* Add padding inside the container */
+  }
+
 #mouse-circle {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    /* background-color: red; */
-    background-color: transparent;
-    border-radius: 50%;
-    pointer-events: none;
-    box-sizing: border-box;
-    border: 1px solid transparent;
-    z-index: 1000;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  /* background-color: red; */
+  background-color: transparent;
+  border-radius: 50%;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  z-index: 1000;
 }

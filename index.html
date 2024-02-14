@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Visualizing Brooklyn Weather Data</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="data/weather.js"></script>
@@ -12,7 +13,11 @@
 <body>
 <div id="container">
 
-    <button class="shuffle"  id="shuffle">Shuffle</button>
+    <div class="button-container">
+    <button class="shuffle"  id="shuffle">Shuffle</button> <div class="info">ℹ️</div>
+    <div class="info-cori"></div>
+</div>
+
     <h3 class="title">Dear Cori, </h3>
     <h4 class="title" >The weather...</h4>
 
@@ -22,10 +27,12 @@
 
 <div id="mouse-circle"></div>
 </div>
+
 </body>
 <script src="scrape.js"></script>
     
 <script src="app.js"></script>
 <script src="shuffle.js"></script>
+<script src="infoButton.js"> </script>
 
 </html>

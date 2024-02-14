@@ -9,6 +9,19 @@ const haikus = [
     "Ocean waves recount, Our journey, deep and vast love, With our baby, joy multiplies.",
     "Mountains echo vows, Cori and I, strength in love, Our child, the summit of joy.",
     "Fields of green, life's canvas, Cori, our baby, and I, Wildflowers on our path."
-  ];
-  
-  
+];
+
+function shuffleHaikus(haikus) {
+    // Flatten the array into a single array of words
+    let words = haikus.join(" ").split(/\s+/);
+    // Shuffle the words
+    for (let i = words.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [words[i], words[j]] = [words[j], words[i]]; // Swap
+    }
+    // Distribute the words back into the original haikus structure
+    return haikus.map(haiku => {
+        return haiku.split(/\s+/).map(() => words.pop()).join(" ");
+    });
+}
+
