@@ -1,0 +1,63 @@
+#container {
+    position: relative;
+}
+
+body{
+    position: relative;
+}
+
+.inner{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    left: 0px;
+    height: 50px;
+}
+
+.title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 9px;
+}
+
+#trail-canvas {
+    position: absolute; /* Changed from fixed to absolute */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: -100; /* Position the canvas behind other content */
+}
+
+button {
+    background-color: white;
+    border: 1px solid blue;
+    margin: 15px;
+    padding: 3px;
+
+}
+button:hover{
+    background-color: gray;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+#windStrands {
+    position: absolute; /* Changed from relative to absolute */
+    z-index: 200;
+}
+
+#mouse-circle {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* background-color: red; */
+    background-color: transparent;
+    border-radius: 50%;
+    pointer-events: none;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    z-index: 1000;
+}
